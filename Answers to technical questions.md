@@ -29,7 +29,7 @@ Yes—performance investigations are common in real projects (e.g., query regres
 
 ```json
 {
-  "name": "BLACKBOXAI",
+  "name": "Vishwa Swami",
   "role": "Software Engineer",
   "strengths": [
     "backend (PHP/PDO, APIs)",
