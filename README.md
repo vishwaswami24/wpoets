@@ -1,10 +1,8 @@
 # Wpoets
 
 <img width="1909" height="911" alt="image" src="https://github.com/user-attachments/assets/37fc2406-3f9c-4902-9ee4-766856bd1e62" />
+<img width="527" height="817" alt="image" src="https://github.com/user-attachments/assets/40089d6a-ff2e-4ae7-baa3-336e54b90c7a" />
 
-<p align="center">
-  <img src="files/images/" alt="Wpoets" width="1" height="1" style="display:none" />
-</p>
 
 [![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=flat&logo=php&logoColor=white)](#)
 [![jQuery/Vanilla JS](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript&logoColor=black)](#)
