@@ -1,5 +1,7 @@
 # Wpoets
 
+<img width="1909" height="911" alt="image" src="https://github.com/user-attachments/assets/37fc2406-3f9c-4902-9ee4-766856bd1e62" />
+
 <p align="center">
   <img src="files/images/" alt="Wpoets" width="1" height="1" style="display:none" />
 </p>
