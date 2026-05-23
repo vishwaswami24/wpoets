@@ -1,0 +1,258 @@
+:root {
+  --navy: #0f2744;
+  --teal: #3dbfbf;
+  --white: #ffffff;
+}
+
+/* ── Section wrapper ── */
+.slider-section {
+  background: var(--navy);
+  padding: 80px 0;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.slider-section .section-header {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.slider-section .section-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.slider-section .section-header p {
+  font-size: 1rem;
+  opacity: 0.75;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── Desktop 3-column grid ── */
+.slider-grid {
+  display: grid !important;
+  grid-template-columns: 300px 1fr 420px;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* ── Column 1: Tab list ── */
+.slider-tabs {
+  background: #f4f5f7;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tab-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a2e;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.tab-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.tab-card.active {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.tab-card.active::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #fff;
+  z-index: 2;
+}
+
+.tab-card img.tab-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── Column 2: Slide content ── */
+.slide-col {
+  background: var(--teal);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 400px;
+}
+
+.slide-col .carousel,
+.slide-col .carousel-inner,
+.slide-col .carousel-item {
+  height: 100%;
+  min-height: 400px;
+}
+
+.slide-content {
+  padding: 40px 36px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+}
+
+.slide-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.slide-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.slide-learn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.slide-learn:hover { color: #fff; text-decoration: underline; }
+
+/* Dot indicators */
+.carousel-indicators {
+  position: relative;
+  margin: 16px 0 0;
+  justify-content: flex-start;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  opacity: 1;
+}
+
+.carousel-indicators .active {
+  background: #fff;
+}
+
+/* ── Column 3: Photo ── */
+.photo-col {
+  overflow: hidden;
+}
+
+.photo-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Visibility helpers ── */
+.desktop-only { display: block; }
+.mobile-only  { display: none;  }
+
+/* ── Mobile ── */
+@media (max-width: 767.98px) {
+  .desktop-only { display: none !important; }
+  .mobile-only  { display: block !important; }
+
+  .slider-section { padding: 40px 0; }
+
+  .slider-section .section-header h2 { font-size: 1.5rem; }
+
+  /* Mobile accordion cards */
+  .mobile-tab-card {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .mobile-tab-header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    cursor: pointer;
+    gap: 12px;
+  }
+
+  .mobile-tab-header .tab-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #1a1a2e;
+  }
+
+  .mobile-tab-header img.tab-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .mobile-tab-toggle {
+    color: #e05a3a;
+    font-size: 1.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .mobile-slide-body {
+    background: var(--teal);
+    padding: 28px 20px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-slide-body .slide-bg {
+    opacity: 0.15;
+  }
+}
+
